@@ -1,12 +1,13 @@
 package com.coralogix.calculator.services;
 
-import com.coralogix.calculator.model.Result;
-import org.springframework.stereotype.Service;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Service
-public class AddService {
-    public Result add(int a, int b) {
-        int sum = a - b;
-        return new Result(sum);
-    }
+import com.coralogix.calculator.model.Film;
+
+@Repository
+public interface AddService extends JpaRepository<Film, Long>{
+	
+	 Film findById(long id);
+	 
 }

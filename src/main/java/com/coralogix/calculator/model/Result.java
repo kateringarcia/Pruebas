@@ -2,17 +2,24 @@ package com.coralogix.calculator.model;
 
 public class Result {
 
-    private int result;
+	private int statuscode;
+	private Film response;
 
-    public Result(int result) {
-        this.result = result;
-    }
 
-    public int getResult() {
-        return result;
-    }
+	public int getStatuscode() {
+		return statuscode;
+	}
 
-    public void setResult(int result) {
-        this.result = result;
-    }
+	public void setStatuscode(int statuscode) {
+		this.statuscode = statuscode;
+	}
+
+	public Film getResponse() {
+		return response;
+	}
+
+	public void setResponse(Film bodyRTA) {
+		this.response = bodyRTA;
+	}
+
 }
